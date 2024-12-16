@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="layout.css" />
+
+    <title>Index_v5_FINAL</title>
+  </head>
+  <body>
+    <script>
+      const body = document.body;
+      const ylasetti = document.createElement("header");
+      const header = document.createElement("h1");
+      const para1 = document.createElement("p");
+      const para1Text = document.createTextNode(
+        "This is a new paragraph. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veritatis et non similique culpa, delectus nihil maxime iure necessitatibus doloribus. Ipsam tempora orem ipsum dolor sit amet consectetur, adipisicing elit."
+      );
+
+      para1.appendChild(para1Text);
+
+      const headerText = document.createTextNode("Tämä on artikkelin otsikko!");
+      header.appendChild(headerText);
+
+      ylasetti.appendChild(header);
+      ylasetti.appendChild(para1);
+      body.appendChild(ylasetti);
+
+      const para2 = document.createElement("p");
+      para2.id = "para2";
+      const para2Text = document.createTextNode(
+        "This is a second paragraph. Consectetur, adipisicing elit. Aut veritatis et non similique culpa, delectus nihil maxime iure necessitatibus doloribus. Ipsam tempora unde magni deserunt pariatur enim. Assumenda, minus nam. Quae, doloremque sequi, accusanconsectetur, adipisicing elit. Aut veritatis et non similique culpa, "
+      );
+      para2.appendChild(para2Text);
+
+      const textWithImageContainer = document.createElement("div");
+      textWithImageContainer.classList.add("text-with-image");
+
+      const img = document.createElement("img");
+      img.src = "images/javascript.jpeg";
+      img.alt = "Javascript";
+
+      textWithImageContainer.appendChild(para2);
+      textWithImageContainer.appendChild(img);
+
+      document.body.appendChild(textWithImageContainer);
+
+      const footer = document.createElement("p");
+      const footerText = document.createTextNode(
+        "(c) 2023 by Endgame Credits Limited"
+      );
+      footer.appendChild(footerText);
+      body.appendChild(footer);
+    </script>
+  </body>
+</html>
